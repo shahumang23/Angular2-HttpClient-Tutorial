@@ -1,0 +1,43 @@
+<div class="container">
+    <h2 class="text-center">Halifax Branch Lists</h2>
+    <div class="form-group">
+        <label for="usr">Filter By City Name:</label>
+        <input type="text" class="form-control" [ngModel]="txtFname" (ngModelChange)="txtFname=$event" name="inputField" placeholder="Search by City Name">
+    </div>
+        <div class="list-group">
+            <div class="list-group-item-heading">
+                <div class="list-group-item list-group-item-primary">
+                    <div class="row">
+                    <div class="col-lg-5 col-md-4">Branch Name</div>
+                    <div class="col-lg-5 col-md-4">City</div>
+                    <div class="col-lg-2 col-md-4">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div  [attr.id]="'accordion_' + i" *ngFor="let form of forms | searchfilter: txtFname; let i = index;">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-lg-5 col-md-4">{{ form.Name }}</div>
+                    <div class="col-lg-5 col-md-4">{{ form.PostalAddress.TownName }}</div>
+                    <div class="col-lg-2 col-md-4">
+                        <a role="button" data-toggle="collapse" [attr.data-parent]="'#accordion_' + i" [attr.href]="'#collapse_' + i" aria-expanded="true">
+                            Branch Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div [attr.id]="'collapse_' + i" class="collapse">
+                <div class="list-group-item list-group-item-secondary">
+                    <div><strong>Branch Name:</strong> {{ form.Name }}</div>
+                    <div><strong>Address:</strong> {{ form.PostalAddress.AddressLine }}</div>
+                    <div><strong>Post code:</strong> {{ form.PostalAddress.PostCode }}</div>
+                    <div><strong>Contact Details:</strong> {{ form.ContactInfo[0].ContactContent }}</div>  
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+
+
