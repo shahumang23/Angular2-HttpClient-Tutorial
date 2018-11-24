@@ -2,13 +2,13 @@
 
 ## Requirements
 
-• Users should be able to view a list of the bank’s branches
-• Users should be able to filter the list of branches by city name
-• Clicking on a branch in the list should show the following additional details about the branch that was clicked:
-  o Branch name
-  o Full address
-  o Phone number
-• Data should be obtained from the Halifax API. Documentation and endpoint information is available here: https://developer.halifax.co.uk/opendata-v2.2#get-branches-2.2
+* Users should be able to view a list of the bank’s branches<br/>
+* Users should be able to filter the list of branches by city name<br/>
+* Clicking on a branch in the list should show the following additional details about the branch that was clicked:<br/>
+  * Branch name<br/>
+  * Full address<br/>
+  * Phone number<br/>
+* Data should be obtained from the Halifax API. Documentation and endpoint information is available here: https://developer.halifax.co.uk/opendata-v2.2#get-branches-2.2
 
 ## Getting Started
 
